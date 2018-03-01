@@ -84,3 +84,10 @@ Promises dont work by default use ```mongoose.Promise=global.Promise```
 
 	---
 
+## Serving in the web
+* Goto https://mlab.com/
+* Signup and login
+* Click **create new**
+* Select AWS and free version ;)
+* Goto users tab and click add **database user**(this allows users to add or delete)
+* They will give a link copy it and your username and password
