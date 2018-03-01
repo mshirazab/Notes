@@ -16,7 +16,8 @@ const googleStrategy = require('passport-google-oauth20')
 passport.use(new googleStrategy({
 		clientID: '',
 		clientSecret: '',
-		callbackURL: '/auth/google/callback' //user comes here after logging in
+		callbackURL: '/auth/google/callback', //user comes here after logging in
+		proxy: true // so that it redirects to https: in production
 	}),
 	// code going to come later for saving users
 )
@@ -86,4 +87,30 @@ It is done using serializeUser and deserializeUser
 passport.serializeUser((user, done)=>{
 	done(null, user.id)
 })
+passport.deserializeUser((is,done)=>{
+	User.findById(id)
+		.then((user)=>{
+			done(null, user)
+		})
+})
 ```
+---
+
+**NOTE**
+
+we use ```user.id``` instead of ```user.googleID``` since passport.serializeuser is for all strategies 
+
+---
+
+## Telling passport to use cookies
+* run in terminal: ```yarn add cookie-session```
+* before adding routes in express server addthe following
+	```javascript
+	const cookieSession = require('cookie-session');
+	app.use(cookieSession({
+		maxAge: /*time in milliseconds*/,
+		keys: [/*give keys for encryption*/]
+	}));
+	app.use(passport.initialize());
+	app.use(passport.session());
+	```
