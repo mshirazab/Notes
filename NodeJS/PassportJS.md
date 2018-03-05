@@ -11,16 +11,16 @@ using google from now on
 ## Setup with strategy
 ```javascript
 const passport = require('passport')
-const googleStrategy = require('passport-google-oauth20')
+const GoogleStrategy = require('passport-google-oauth20')
 
-passport.use(new googleStrategy({
+passport.use(new GoogleStrategy({
 		clientID: '',
 		clientSecret: '',
 		callbackURL: '/auth/google/callback', //user comes here after logging in
 		proxy: true // so that it redirects to https: in production
-	}),
+	},
 	// code going to come later for saving users
-)
+))
 ```
 ---
 

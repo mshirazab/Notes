@@ -36,3 +36,7 @@ it will create a folder called **client** which has the react boilerplate.
 			}
 		}
 	```
+## Add redux and routing
+```bash 
+$yarn add redux react-redux react-router-dom
+```
