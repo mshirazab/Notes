@@ -47,7 +47,9 @@ app.get('/auth/google',passport.authenticate('google',{
 
 ## Callback URL setup
 ```javascript
-app.get('/auth/google/callback',passport.authenticate('google'))
+app.get('/auth/google/callback',passport.authenticate('google'),(req,res)=>{
+	res.redirect('res');
+})
 ```
 
 ## What to do on successful login
@@ -114,3 +116,11 @@ we use ```user.id``` instead of ```user.googleID``` since passport.serializeuser
 	app.use(passport.initialize());
 	app.use(passport.session());
 	```
+
+## Logout
+```javascript
+app.logout('/logout', (req, res)=>{
+	req.logout();
+	res.redirect('/');
+});
+```
