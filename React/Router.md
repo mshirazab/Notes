@@ -108,7 +108,7 @@ import { Link } from 'react-router-dom';
   hash: '#the-hash'
 }}/>
 ```
-## <a name="navigation-navlink"></a>Link
+## <a name="navigation-navlink"></a>NavLink
 A special version of the **Link** that will add styling attributes to the rendered element when it matches the current URL.
 ### Parameter
 * **to**: Similar to [Link](#navigation-link)
