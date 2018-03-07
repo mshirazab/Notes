@@ -15,7 +15,7 @@ It is a package that allows react to make and change components according to the
 2. It is used in **App.js** file in components folder.
 
 # <a name="components"></a>[Components](#toc)
-##  <a name="components-browser-router"></a>BrowserRouter
+##  <a name="components-browser-router"></a>[BrowserRouter](#toc)
 A Router that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL.
 ### Examples
 ```jsx
@@ -54,7 +54,7 @@ import { Route } from 'react-router-dom';
 	component={(props) => <Contact {...props} extra={someVariable} />}
 />
 ```
-## <a name="components-switch"></a>Switch 
+## <a name="components-switch"></a>[Switch](#toc) 
 This component allows us to ensure exclusivity among the paths.It renders the first child **Route** or **Redirect** that matches the location.
 ### Example
 In the following example, when going to **/about**, without switch it will render the components, **About**,**User**,**NoMatch**.
@@ -69,8 +69,8 @@ import { Switch, Route } from 'react-router'
 </Switch>
 ```
 
-# <a name="navigation"></a>Navigation
-## <a name="navigation-redirect"></a>Redirect
+# <a name="navigation"></a>[Navigation](#toc)
+## <a name="navigation-redirect"></a>[Redirect](#toc)
 This component will navigate to a new location or link.
 ### Parameters
 * **from**: The URL to redirect to.
@@ -88,7 +88,7 @@ import { Route, Redirect } from 'react-router'
   )
 )}/>
 ```
-## <a name="navigation-link"></a>Link
+## <a name="navigation-link"></a>[Link](#toc)
 Provides declarative, accessible navigation around your application.
 ### Parameter
 * **to(String)**: the link to goto.
@@ -108,7 +108,7 @@ import { Link } from 'react-router-dom';
   hash: '#the-hash'
 }}/>
 ```
-## <a name="navigation-navlink"></a>NavLink
+## <a name="navigation-navlink"></a>[NavLink](#toc)
 A special version of the **Link** that will add styling attributes to the rendered element when it matches the current URL.
 ### Parameter
 * **to**: Similar to [Link](#navigation-link)
