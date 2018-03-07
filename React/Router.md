@@ -1,6 +1,6 @@
 # Router
 It is a package that allows react to make and change components according to the link the current user is in.
-# Table of contents
+# <a name="toc"></a>Table of contents
 * [Setup](#setup)
 * [Components](#components)
 	* [BrowserRouter](#components-browser-router)
@@ -10,11 +10,11 @@ It is a package that allows react to make and change components according to the
 	* [Redirect](#navigation-redirect)
 	* [Link](#navigation-link)
 	* [NavLink](#navigation-navlink)
-# <a name="setup"></a>Setup
+# <a name="setup"></a>[Setup](#toc)
 1. install react router.(Run ```yarn add react-router-dom``` in terminal)
 2. It is used in **App.js** file in components folder.
 
-# <a name="components"></a>Components
+# <a name="components"></a>[Components](#toc)
 ##  <a name="components-browser-router"></a>BrowserRouter
 A Router that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL.
 ### Examples
@@ -24,7 +24,7 @@ import { BrowserRouter } from 'react-router-dom';
   <App/>
 </BrowserRouter>
 ```
-##  <a name="components-route"></a>Route
+##  <a name="components-route"></a>[Route](#toc)
 This component allows us to show what is the route link and the component to show when the link is visited.
 ### Parameters
 * **component**: This tells which component to load.
