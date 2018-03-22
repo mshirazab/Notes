@@ -31,4 +31,4 @@ They store the state and actually change the data of the state when an action in
 		//whatever you return will be obtained as props to the component
 		return { auth };
 	}
-	export default connect(null)(App);
+	export default connect(mapStateToProps)(App);
