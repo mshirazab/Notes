@@ -1,4 +1,4 @@
-# Startup
+# React Notes
 
 ## Installing create-react-app
 
@@ -14,3 +14,5 @@
 it will create a folder called **client** which has the react boilerplate.
 
 ---
+
+##
